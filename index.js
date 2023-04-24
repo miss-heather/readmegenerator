@@ -1,8 +1,8 @@
 const inquirer =require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 
-inquirer
-    .prompt {[
+const questions = [
         {
             type: "input",
             name: "name",
@@ -36,29 +36,47 @@ inquirer
         {
             type: "input",
             name: "tests",
-            message: "What is the name of your project?",
+            message: "What methods of testing did you utilize?",
         },
         {
-            type: "input",
+            type: "list",
             name: "license",
-            message: "Please provide license information.",
+            message: "Please select appropriate license information.",
+            choices:["Mozilla","Eclipse", "MIT", "Apache", "None"]
         },
         {
             type: "input",
             name: "questions",
-            message: "What is the name of your project?",
+            message: "Enter contact info here.",
         },
 
-    ]}
-    .then{(data_ => {
-        var readme = 
+    ];
+
+    function writeToFile(fileName,data) {
+        fs.writeFile(fileName, data, (err) => {
+            if (err) throw err;
+            console.log('Success!');
+    });
+    }
+
+    function init() {
+        inquirer.prompt(questions)
+        .then (data=>{
+            console.log(data)
+            writeToFile('readme.md', generateMarkdown(data))
+        })
+    }
+
+    // .then 
+    {(data) => {
+        var readme = `
     # <${data.name}>
 
     ## Description
 
     ${data.description}
 
-    ## Table of CountQueuingStrategy
+    ## Table of Contents
 
     ${data.table}
 
@@ -86,8 +104,8 @@ inquirer
 
     ${data.questions}
 
-    ;
-        fs.writeFile("./README/README.MD", README, (err) =>
-        err ? console.log(err) : console.log("success!")
-        );
-    })}
+    // `;
+
+    }}
+    
+    init();
