@@ -5,6 +5,11 @@ The purpose of this application is to quickly create professional README.md page
 
 [README.md Generator Video](Imagery/README.mp4)
 
+[File to Generated Preview](preview.md)
+
+![Generated Example (top)](Imagery/rmpreview.png)
+![Generated Example (bottom)](Imagery/rmpreview2.png)
+
 ## README.md Generator Installation
 N/A
 
