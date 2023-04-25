@@ -20,7 +20,7 @@
 
   ## Installation
 
-  Project Install
+  Proj Install
 
   ## Usage
 

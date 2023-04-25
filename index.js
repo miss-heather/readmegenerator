@@ -57,7 +57,8 @@ const questions = [
         inquirer.prompt(questions)
         .then (data=>{
             console.log(data)
-            writeToFile('readme.md', generateMarkdown(data))
+            writeToFile('preview.md', generateMarkdown(data))
+            
         })
     }
     
