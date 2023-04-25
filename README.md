@@ -3,7 +3,7 @@
 ## README.md Generator Description:
 The purpose of this application is to quickly create professional README.md pages. It includes places to include the application's description, installation instructions, usage information, contribution guidelines, and test instructions. Additionally, when a license is chosen, the badge for said license will populate at the top of the page, as well as the corresponding info. There is a place to enter GitHub user information, as well as contact information to reach out to the app developer. 
 
-[README.md Generator Video](https://watch.screencastify.com/v/nk0Fh7waLazmCDC0up1D)
+[README.md Generator Video](https://drive.google.com/file/d/1u674cpAKVKwBKT2PRVtuFhRZiXpExQxN/view?usp=sharing)
 
 [File to Generated Preview](preview.md)
 
