@@ -15,11 +15,6 @@ const questions = [
         },
         {
             type: "input",
-            name: "table",
-            message: "Please enter the Table of Contents.",
-        },
-        {
-            type: "input",
             name: "installation",
             message: "Please provide installation instructions for your project.",
         },
@@ -46,10 +41,9 @@ const questions = [
         },
         {
             type: "input",
-            name: "questions",
-            message: "Enter contact info here.",
+            name: "contact",
+            message: "Please provide GitHub user name and email.",
         },
-
     ];
 
     function writeToFile(fileName,data) {
@@ -66,46 +60,5 @@ const questions = [
             writeToFile('readme.md', generateMarkdown(data))
         })
     }
-
-    // .then 
-    {(data) => {
-        var readme = `
-    # <${data.name}>
-
-    ## Description
-
-    ${data.description}
-
-    ## Table of Contents
-
-    ${data.table}
-
-    ## Installation
-
-    ${data.installation}
-
-    ## Usage
-
-    ${data.usage}
-
-    ## Contributions
-
-    ${data.contribute}
-
-    ## Tests
-
-    ${data.tests}
-
-    ## Licensing
-
-    ${data.license}
-
-    ## Questions
-
-    ${data.questions}
-
-    // `;
-
-    }}
     
     init();
